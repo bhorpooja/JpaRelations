@@ -35,7 +35,7 @@ public class StudentController {
                 studentRepo.save(student);
                 return "Data inserted to Student only";
             } else {
-//                deptRepo.save(student.getDept());
+                deptRepo.save(student.getDept());
                studentRepo.save(student);
                return "Data inserted to Dept and Student";
             }
