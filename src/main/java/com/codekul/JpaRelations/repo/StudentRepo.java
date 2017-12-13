@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * Created by pooja on 30/11/17.
  */
+
 public interface StudentRepo extends JpaRepository<Student,Integer> {
 
     @Query("select id,name,city from Student where deptid=:id")

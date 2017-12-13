@@ -17,7 +17,7 @@ public class Dept {
     Integer id;
     String deptName;
 
-    @OneToMany(mappedBy = "dept",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "dept")
     Set<Student> studentSet;
 
     public String getDeptName() {

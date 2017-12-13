@@ -35,7 +35,7 @@ public class StudentController {
                 studentRepo.save(student);
                 return "Data inserted to Student only";
             } else {
-                deptRepo.save(student.getDept());
+//                deptRepo.save(student.getDept());
                studentRepo.save(student);
                return "Data inserted to Dept and Student";
             }
@@ -55,7 +55,6 @@ public class StudentController {
     @GetMapping("/getStudent/{deptid}")
     public List<Student> getStudent(@PathVariable Integer deptid){
         List<Student> stud=studentRepo.findByDept(deptid);
-//        List<Student> stud=studentRepo.findByDept(deptRepo.findById(id));
         return stud;
     }
 

@@ -13,7 +13,7 @@ public class Student {
     String name;
     String city;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="deptid")
     Dept dept;
 
